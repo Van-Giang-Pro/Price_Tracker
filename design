@@ -1,5 +1,5 @@
 Title : Price Tracker
-Decription : An app that tracks the price of a product and
+Description : An app that tracks the price of a product and
 notifies you when the price drop below a certain.
 Object : Product :
             name, url, price_drop_notification
