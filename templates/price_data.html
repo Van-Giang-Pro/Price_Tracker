@@ -8,5 +8,11 @@
 <body>
 <h1><b>My Favorite Shoe Price Tracking</b></h1>
 <p style="font-style: bold" >My Favorite Price Shoe Is {{value2}} And The Price Is {{value1}}</p>
+<form method="post">
+    <label>Bill Discount : </label>
+    <input type="text" name="discount_percent">
+    <input type="submit" value="Submit">
+</form>
+<p style="font-style: bold" >My Shoe Price After Applying Discount {{discount_percent}}% Is {{discount_price}}</p>
 </body>
 </html>

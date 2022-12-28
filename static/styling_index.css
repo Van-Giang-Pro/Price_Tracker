@@ -19,3 +19,9 @@ a {
     font-size: 30px;
     text-align: center;
 }
+
+label {
+    width: 100px;
+    display : inline-block;
+    text-align: center;
+}

@@ -13,3 +13,20 @@ p {
     font-size: 30px;
     text-align: center;
 }
+
+form {
+    text-align: center;
+}
+
+label {
+    color: yellow;
+    font-size: 30px;
+}
+
+input {
+    color: firebrick;
+    font-size: 30px;
+    width: 150px;
+    text-align: center;
+    margin-right: 10px;
+}

@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+seperator_of_thousands = ','
 
 class Sneaker:
 
@@ -18,12 +19,12 @@ class Sneaker:
 			for price in object_html.findAll('span', class_='woocommerce-Price-amount amount'):
 				price = price.text
 				name_price_dict[name] = price
-				print(f"{name} - {price}")
+				# print(f"{name} - {price}")
 		return name_price_dict[self.product_name]
 
+	def calculate_discount(self, discount_percent):
+		price = int(self.get_price().split('₫')[0].replace(',', ''))
+		discount_price = round(int(price - (price * discount_percent / 100)))
+		price_in_currency_format = "{:,}₫".format(discount_price)
+		return price_in_currency_format
 
-if __name__ == "__main__":
-	product_url = "https://saigonsneaker.com/collections/giay-new-balance/"
-	product_name = 'New Balance CRT 300 Beige'
-	sneaker = Sneaker(product_url, product_name)
-	sneaker.get_price()
